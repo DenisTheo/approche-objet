@@ -10,7 +10,7 @@ public class TestPersonne
 		AdressePostale addrB= new AdressePostale(5, "avenue Albert Camus", 80_480, "Amiens");
 
 		Personne persA = new Personne("Pierre", "Johnson");
-		persA.addr = addrA;
+		persA.setAddress(addrA);
 		
 		Personne persB = new Personne("Paul", "Jacques", addrB);
 	}
