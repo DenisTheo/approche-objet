@@ -6,28 +6,14 @@ public class TestPersonne
 {
 	public static void main(String[] args)
 	{
-		AdressePostale addrA = new AdressePostale();
-		AdressePostale addrB = new AdressePostale();
-		
-		addrA.number = 29;
-		addrA.street = "rue Victor Hugo";
-		addrA.postcode = 42_600;
-		addrA.city = "Lyon";
-		
-		addrB.number = 5;
-		addrB.street = "avenue Albert Camus";
-		addrB.postcode = 80_480;
-		addrB.city = "Amiens";
+		AdressePostale addrA = new AdressePostale(29, "rue Victor Hugo", 42_600, "Lyon");
+		AdressePostale addrB= new AdressePostale(5, "avenue Albert Camus", 80_480, "Amiens");
 
-		Personne persA = new Personne();
-		Personne persB = new Personne();
+		Personne persA = new Personne("Pierre", "Johnson");
+		Personne persB = new Personne("Paul", "Jacques");
 
-		persA.first_name = "Pierre";
-		persA.last_name = "Johnson";
 		persA.addr = addrA;
 		
-		persA.first_name = "Paul";
-		persA.last_name = "Jacques";
 		persA.addr = addrB;
 	}
 }
