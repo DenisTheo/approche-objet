@@ -40,4 +40,10 @@ public class Compte
 	{
 		balance -= amount;
 	}
+	
+	@Override
+	public String toString()
+	{
+		return "Account " + id + " - Balance: " + balance + "$.";
+	}
 }
