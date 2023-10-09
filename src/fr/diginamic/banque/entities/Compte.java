@@ -3,9 +3,9 @@ package fr.diginamic.banque.entities;
 public class Compte
 {
 	private int id;
-	private double balance;
+	private float balance;
 	
-	public Compte(int id, double balance)
+	public Compte(int id, float balance)
 	{
 		setID(id);
 		setBalance(balance);
@@ -16,7 +16,7 @@ public class Compte
 		return id;
 	}
 	
-	public double getBalance()
+	public float getBalance()
 	{
 		return balance;
 	}
@@ -26,17 +26,17 @@ public class Compte
 		this.id = id;
 	}
 	
-	protected void setBalance(double balance)
+	protected void setBalance(float balance)
 	{
 		this.balance = balance;
 	}
 	
-	public void credit(double amount)
+	public void credit(float amount)
 	{
 		balance += amount;
 	}
 	
-	public void debit(double amount)
+	public void debit(float amount)
 	{
 		balance -= amount;
 	}
