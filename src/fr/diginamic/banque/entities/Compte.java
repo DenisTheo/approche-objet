@@ -44,6 +44,6 @@ public class Compte
 	@Override
 	public String toString()
 	{
-		return "Account " + id + " - Balance: " + balance + "$.";
+		return "Account " + id + " - Balance: " + balance + "$";
 	}
 }
