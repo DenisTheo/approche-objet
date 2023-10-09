@@ -20,11 +20,14 @@ public class TestBanque
 		Operation[] operations = {cred1, deb1, cred2, deb2};
 
 		System.out.println(clients[0].toString());
+		float total = 0.00F;
 		for(int i=0; i<operations.length; i++)
 		{
+			total += operations[i].getDifference();
 			clients[0].Transaction(operations[i]);
 			System.out.println(operations[i].toString());
 			System.out.println("Change on " + clients[0].toString());
 		}
+		System.out.println("\nTotal Difference: " + total + "$.");
 	}
 }
