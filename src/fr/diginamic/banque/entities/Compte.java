@@ -23,12 +23,17 @@ public class Compte
 	
 	protected void setID(int id)
 	{
-		this.id = id;
+		this.id = Math.abs(id);
 	}
 	
 	protected void setBalance(float balance)
 	{
 		this.balance = balance;
+	}
+	
+	public void Transaction(Operation operation)
+	{
+		balance += operation.getDifference();
 	}
 	
 	@Override
