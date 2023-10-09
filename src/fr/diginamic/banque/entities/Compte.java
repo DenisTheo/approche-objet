@@ -31,16 +31,6 @@ public class Compte
 		this.balance = balance;
 	}
 	
-	public void credit(float amount)
-	{
-		balance += amount;
-	}
-	
-	public void debit(float amount)
-	{
-		balance -= amount;
-	}
-	
 	@Override
 	public String toString()
 	{
