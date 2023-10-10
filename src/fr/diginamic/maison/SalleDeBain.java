@@ -9,6 +9,6 @@ public class SalleDeBain extends Piece
 	
 	public String getType()
 	{
-		return "Bathroom";
+		return RoomTypes.Room_SalleDeBain;
 	}
 }

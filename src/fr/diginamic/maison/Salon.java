@@ -9,6 +9,6 @@ public class Salon extends Piece
 	
 	public String getType()
 	{
-		return "Living Room";
+		return RoomTypes.Room_Salon;
 	}
 }

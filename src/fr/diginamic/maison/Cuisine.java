@@ -9,6 +9,6 @@ public class Cuisine extends Piece
 	
 	public String getType()
 	{
-		return "Kitchen";
+		return RoomTypes.Room_Cuisine;
 	}
 }

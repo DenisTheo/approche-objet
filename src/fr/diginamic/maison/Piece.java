@@ -18,7 +18,7 @@ public abstract class Piece
 
 	public void setArea(double area)
 	{
-	    this.area = area;
+	    this.area = Math.abs(area);
 	}
 
 	public int getFloor()
@@ -31,5 +31,8 @@ public abstract class Piece
 	    this.floor = floor;
 	}
 	
-	public abstract String getType();
+	public String getType()
+	{
+		return RoomTypes.Room_Piece; // Just in Case
+	}
 }

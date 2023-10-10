@@ -9,6 +9,6 @@ public class WC extends Piece
 
 	public String getType()
 	{
-		return "Toilet";
+		return RoomTypes.Room_WC;
 	}
 }

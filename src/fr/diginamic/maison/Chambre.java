@@ -9,6 +9,6 @@ public class Chambre extends Piece
 	
 	public String getType()
 	{
-		return "Bedroom";
+		return RoomTypes.Room_Chambre;
 	}
 }
