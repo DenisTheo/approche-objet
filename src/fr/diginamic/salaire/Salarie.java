@@ -10,6 +10,11 @@ public class Salarie extends Intervenant
 		setNom(nom);
 		setSalaire(salaire);
 	}
+    
+    public String getStatut()
+    {
+    	return "Employee";
+    }
 
 	public double getSalaire()
 	{

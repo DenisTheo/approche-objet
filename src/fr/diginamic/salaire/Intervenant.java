@@ -6,6 +6,8 @@ public abstract class Intervenant
 	private String prenom;
 	
 	public abstract double getSalaire();
+    
+    public abstract String getStatut();
 	
     public String getNom()
     {
@@ -25,5 +27,16 @@ public abstract class Intervenant
     public void setPrenom(String prenom)
     {
         this.prenom = prenom;
+    }
+    
+    public void AfficherDonnees()
+    {
+    	System.out.println(toString());
+    }
+    
+    @Override
+    public String toString()
+    {
+    	return getPrenom() + " " + getNom().toUpperCase() + " - " + getStatut() + " - " + getSalaire() + "$";
     }
 }

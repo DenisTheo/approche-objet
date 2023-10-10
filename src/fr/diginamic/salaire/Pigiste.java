@@ -17,15 +17,25 @@ public class Pigiste extends Intervenant
 	{
 		return worked_days * daily_remuneration;
 	}
+    
+    public String getStatut()
+    {
+    	return "Freelancer";
+    }
 
 	public void setDailyRemuneration(double daily_remuneration)
 	{
 		this.daily_remuneration = daily_remuneration;
 	}
-	
-	public void newMonth()
+
+	public double getDailyRemuneration()
 	{
-		worked_days = 0;
+		return daily_remuneration;
+	}
+
+	public double getWorkedDays()
+	{
+		return worked_days;
 	}
 	
 	public void addWorkedDay(int nb_days)
@@ -37,4 +47,15 @@ public class Pigiste extends Intervenant
 	{
 		addWorkedDay(1);
 	}
+	
+	public void newMonth()
+	{
+		worked_days = 0;
+	}
+    
+    @Override
+    public String toString()
+    {
+    	return super.toString() + " (" + getDailyRemuneration() + "$/day)";
+    }
 }
