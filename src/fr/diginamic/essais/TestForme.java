@@ -2,7 +2,7 @@ package fr.diginamic.essais;
 
 import fr.diginamic.formes.*;
 
-public class testForme
+public class TestForme
 {
 	public static void main(String[] args)
 	{
