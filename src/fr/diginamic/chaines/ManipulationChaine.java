@@ -13,7 +13,7 @@ public class ManipulationChaine
 		System.out.println("Index of First ';': " + chaine.indexOf(';'));
 		System.out.println("Last Name: " + chaine.substring(0, chaine.indexOf(';')));
 		System.out.println("Last Name (Capital): " + chaine.substring(0, chaine.indexOf(';')).toUpperCase());
-		System.out.println("Last Name (lwoer case): " + chaine.substring(0, chaine.indexOf(';')).toLowerCase());
+		System.out.println("Last Name (lower case): " + chaine.substring(0, chaine.indexOf(';')).toLowerCase());
 		
 		String[] split = chaine.split(";");
 		for(int i=0; i<split.length; i++)
