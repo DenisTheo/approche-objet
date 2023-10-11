@@ -18,47 +18,47 @@ public class Game
 		Scanner scanner = new Scanner(System.in);
 		int option = 0;
 
-        do{
-        	do {
-	            System.out.println("\n      -Main Menu-");
-	            System.out.println("1. Create a New Character");
-	            System.out.println("2. Battle a Random Enemy");
-	            System.out.println("3. See My Score");
-	            System.out.println("4. Quit");
+        do
+        {
+	        System.out.println("\n      -Main Menu-");
+	        System.out.println("1. Create a New Character");
+	        System.out.println("2. Battle a Random Enemy");
+	        System.out.println("3. See My Score");
+	        System.out.println("4. Quit");
 	            
-	            try
-	            {
-	            	option = scanner.nextInt();
-	            }catch(Exception e)
-	            {
-	            	option = 0;
-	            }
+	        try
+	        {
+	         	option = scanner.nextInt();
+	        }catch(Exception e)
+	        {
+	        	option = 0;
+	        }
 	            
-	            switch(option)
-	    		{
-	    			case 1:
-	    				createCharacter();
-	    				menu();
-	    			case 2:
-	    				if (user == null)
-	    					noCharacterErrorMessage();
-	    				else
-	    					startBattle();
-	    				menu();
-	    			case 3:
-	    				if (user == null)
-	    					noCharacterErrorMessage();
-	    				else
-	    					System.out.println("Your Score at the moment is " + user.getScore());
-	    				menu();
-	    			case 4:
-	    				return;
-	    			default:
-	    				System.out.println("Not sure evrything went fine over here...");
-	    				menu();
-	    		}
-        	}while(option != 1 && option != 2 && option != 3 && option != 4);
-        }while(option != 4);// End the game
+	        switch(option)
+	        {
+	        	case 1:
+	    		    createCharacter();
+	    			menu();
+	    			break;
+	    		case 2:
+	    			if (user == null)
+	    				noCharacterErrorMessage();
+	    			else
+	    				startBattle();
+	    			menu();
+	    			break;
+	    		case 3:
+	    			if (user == null)
+	    				noCharacterErrorMessage();
+	    			else
+	    				System.out.println("Your Score at the moment is " + user.getScore());
+	    		    menu();
+	    			break;
+	    		default:
+	    			break;
+	    	}
+	        pause(1000);
+        }while(option != 1 && option != 2 && option != 3 && option != 4);
 	}
 	
 	public void createCharacter()
@@ -97,7 +97,9 @@ public class Game
 			System.out.println("Your HP: " + user.getHP() + "/" + user.getHPBar() + " | Enemy HP: " + enemy.getHP());
 			player_power = user.Attack();
 			enemy_power = user.Attack();
+			pause(333);
 			System.out.println("Your Attack Power: " + player_power + " | Enemy Attack Power: " + enemy_power);
+			pause(500);
 			
 			if (player_power >= enemy_power)
 			{
@@ -109,6 +111,7 @@ public class Game
 				System.out.println("Your enemy overpowered you! received " + enemy_power + " damage.");
 				user.getDamage(enemy_power);
 			}
+			pause(500);
 		}while(enemy.getHP() > 0 && user.getHP() > 0);
 		
 		if(enemy.getHP() <= 0)
@@ -121,6 +124,18 @@ public class Game
 		{
 			System.out.println("You lived through enough battles to amass " + user.getScore() + " points, until today, where you fell on the battlefield. Rest in Peace.");
 			user = null;
+		}
+		pause(1500);
+	}
+	
+	private void pause(int ms)
+	{
+		try
+		{
+		    Thread.sleep(ms);
+		} catch (InterruptedException e)
+		{
+		    e.printStackTrace();
 		}
 	}
 }
