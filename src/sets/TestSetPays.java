@@ -1,6 +1,7 @@
 package sets;
 
 import java.util.HashSet;
+import java.text.DecimalFormat;
 
 public class TestSetPays
 {
@@ -30,9 +31,10 @@ public class TestSetPays
 			if (country.getPIB() < pibMin.getPibHab())
 				pibMin = country;
 		}
-		System.out.println("The country with the highest GDP per capita rate is " + pibHabMax.getNom() + ".");
-		System.out.println("The country with the highest GDP is " + pibMax.getNom() + ".");
-		System.out.println("The country with the lowest GDP is " + pibMin.getNom() + ".");
+		DecimalFormat df = new DecimalFormat("#,###.##");
+		System.out.println("Highest GDP per capita rate is " + pibHabMax.getNom() + " (" + df.format(pibMin.getPibHab()) + "$ per capita).");
+		System.out.println("Highest GDP is " + pibMax.getNom() + " (" + df.format(pibMin.getPIB()) + "$).");
+		System.out.println("Lowest GDP is " + pibMin.getNom() + " (" + df.format(pibMin.getPIB()) + "$).");
 		h7.remove(pibMin);
 		
 		for(Pays country : h7)
