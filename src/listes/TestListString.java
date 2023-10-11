@@ -18,9 +18,9 @@ public class TestListString
 		list.add("Marseille");
 		list.add("Tarbes");
 		
-		String target = "";
-		
 		Iterator<String> iterator = list.iterator();
+		
+		String target = "";
 		
 		while (iterator.hasNext())
 		{
