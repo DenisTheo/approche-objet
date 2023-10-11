@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class TestListeString
+public class TestListeInt
 {
 	public static void main(String[] args)
 	{
