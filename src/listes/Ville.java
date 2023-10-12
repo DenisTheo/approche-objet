@@ -30,4 +30,10 @@ public class Ville
 	{
 		return nbHab;
 	}
+	
+	@Override
+	public String toString()
+	{
+		return getNom() + " - Residents: " + getNbHab();
+	}
 }
