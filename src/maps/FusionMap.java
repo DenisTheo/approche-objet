@@ -1,6 +1,7 @@
 package maps;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class FusionMap
 {
@@ -15,5 +16,14 @@ public class FusionMap
 		map2.put(4, "Blanc");
 		map2.put(5, "Bleu");
 		map2.put(6, "Orange");
+		
+
+		HashMap<Integer, String> map3 = new HashMap<Integer, String>();
+		// Loop Method
+		for(HashMap.Entry<Integer, String> entry : map1.entrySet())
+			System.out.println(entry);
+		
+		// simple putAll Method
+		map3.putAll(map2);
 	}
 }
