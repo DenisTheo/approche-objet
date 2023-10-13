@@ -1,7 +1,7 @@
 package fichier;
 
-public class Ville {
-
+public class Ville
+{
     private String nom;
     private String code;
     private String nomRegion;
