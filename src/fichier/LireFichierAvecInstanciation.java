@@ -27,7 +27,7 @@ public class LireFichierAvecInstanciation
 			// splitLine[9] = Total Population
 			int pop = Integer.parseInt(splitLine[9].trim().replaceAll(" ", ""));
 			
-			// splitLine[6] = City Name, [2] = Code Departement, [1] = Region
+			// splitLine[6] = City/Municipallity Name, [2] = Code Department, [1] = Region Name
 			cities.add(new Ville(splitLine[6], splitLine[2], splitLine[1], pop));
 		}
 		for (Ville city: cities)
