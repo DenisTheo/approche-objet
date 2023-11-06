@@ -9,7 +9,7 @@ public class Application
 		Recensement recensement = new Recensement();
 		MainMenu app;
 
-		// Data Input + tells if it succeeds or not with a boolean
+		// Fetches Input File Data + tells if it succeeds or not with a boolean
 		if(recensement.getDataSet(INPUT))
 			app = new MainMenu(recensement); // it will manage sub menus on its own
 	}

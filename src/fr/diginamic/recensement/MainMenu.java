@@ -12,7 +12,7 @@ public class MainMenu extends MenuService
 		int option;
 		do
 		{
-			System.out.println("\n                -Main Menu-"
+			System.out.print("\n                -Main Menu-\n"
 					         + "1. See the Population Count of a given City\n"
                              + "2. See the Population Count of a given Department\n"
                              + "3. See the Population Count of a given Region\n"
@@ -21,7 +21,8 @@ public class MainMenu extends MenuService
                              + "6. See the 10 Cities with the most people in a given Department\n"
                              + "7. See the 10 Cities with the most people in a given Region\n"
                              + "8. See the 10 Cities with the most people\n"
-                             + "9. Quit\n>");
+                             + "9. Quit\n"
+                             + "     > ");
 	        try
 	        {
 	         	option = scanner.nextInt();
@@ -34,44 +35,39 @@ public class MainMenu extends MenuService
 	        }
 		}while(option < 1 && option > 9);
         
-        openMenu(option);
+        menuSelect(option);
 	}
 	
-	public void openMenu(int option)
+	private void menuSelect(int option)
 	{
-		MenuService menu;
+		MenuService next;
+		boolean bringMenuBack = true;
 		clear();
         switch(option)
         {
         	case 1:
-    		    
+        		next = new MenuPopCity(getRecensement());
     			break;
     		case 2:
-    			
     			break;
     		case 3:
-
     			break;
     		case 4:
-
     			break;
     		case 5:
-
     			break;
     		case 6:
-
     			break;
     		case 7:
-
     			break;
     		case 8:
-
     			break;
-    		case 9: // Close, end of Loop
-    			break;
-    		default:
+    		default: //including case 9
+    			bringMenuBack = false;
     			break;
     	}
-        pause(333);
+        if(bringMenuBack)
+        	next = new MainMenu(getRecensement());
+        	
 	}
 }

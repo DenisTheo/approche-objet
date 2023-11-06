@@ -52,6 +52,23 @@ public class Recensement
 		return true; // notifies the data assimilation was a success
 	}
 	
+	public boolean checkPostCodeValidity(int code)
+	{
+		for(PostCode zipcode : cities.keySet())
+		{
+			try
+			{
+				if (zipcode.getCode() == code)
+					return true;
+			}catch(Exception e)
+			{
+				throw e;
+			}
+		}
+		
+		return false;
+	}
+	
 	public HashMap<PostCode, Ville> getCitiesMap()
 	{
 		return cities;
@@ -104,7 +121,6 @@ public class Recensement
 		return total;
 	}
 	
-	@SuppressWarnings("unlikely-arg-type")
 	public int getTotalPop()
 	{
 		int total = 0;
